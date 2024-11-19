@@ -1,0 +1,168 @@
+/* Default Light Mode Variables */
+:root {
+    --nav-color: #5DB0E6;
+    --nav-height: 10vh;
+    --footer-color: #5DB0E6;
+    --footer-height: 20vh;
+    --main-color: #B2D5F1;
+    --main-height: 70vh;
+    --resaltar: #FFBB02;
+    
+    --background-color: #FFFFFF; /* Light background */
+    --text-color: #000000; /* Light text */
+    --button-border-color: #000000; /* Light button border */
+    --button-text-color: #000000; /* Light button text */
+    --button-bg-color: #FFFFFF; /* Light button background */
+    --aside-bg-color: #f0f0f0; /* Light aside background */
+    --aside-button-border-color: #000000;
+    --aside-button-bg-color: #FFFFFF;
+}
+
+/* Night Mode Variables */
+.night-mode {
+    --nav-color: #333333; /* Dark navigation */
+    --footer-color: #333333; /* Dark footer */
+    --main-color: #2C2C2C; /* Dark main content */
+    --resaltar: #FFBB02; /* Keeping the highlight color consistent */
+    --background-color: #121212; /* Dark background */
+    --text-color: #E1E1E1; /* Light text on dark background */
+    --button-border-color: #E1E1E1; /* Light button border */
+    --button-text-color: #E1E1E1; /* Light button text */
+    --button-bg-color: #333333; /* Dark button background */
+    --aside-bg-color: #333333; /* Dark aside background */
+    --aside-button-border-color: #E1E1E1;
+    --aside-button-bg-color: #333333;
+}
+
+/* Apply styles */
+html, body {
+    height: 100%; 
+    margin: 0; 
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    padding: 10px; 
+    background-color: var(--nav-color); 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    z-index: 1000; 
+}
+
+nav h1 {
+    flex: 1; 
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+footer {
+    display: flex;
+    padding: 20px; 
+    background-color: var(--footer-color); 
+    text-align: center;
+    font-size: 1.2em; 
+    height: 20px; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+aside {
+    width: 250px;
+    background-color: var(--aside-bg-color);
+    height: calc(100vh - 120px);
+    position: fixed; 
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+aside button {
+    border: 2px solid var(--aside-button-border-color);
+    border-radius: 40px;
+    width: 150px;
+    height: 30px;
+    background-color: var(--aside-button-bg-color);
+    color: var(--button-text-color);
+}
+
+#usuarioAside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 30px;
+}
+
+#usuarioAside img {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#usuarioAside span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/* Media Query for Prefers-Color-Scheme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+
+    nav {
+        background-color: var(--nav-color);
+    }
+
+    footer {
+        background-color: var(--footer-color);
+    }
+
+    aside {
+        background-color: var(--aside-bg-color); /* Dark aside */
+    }
+}

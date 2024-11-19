@@ -1,5 +1,43 @@
-body{
+/* Default Light Mode Variables */
+:root {
+    --background-color: #FFFFFF; /* Light background */
+    --text-color: #000000; /* Light text */
+    --form-bg-color: #f9f9f9; /* Light form background */
+    --form-border-color: #1DA1F2; /* Form border color */
+    --form-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+    --textarea-bg-color: #FFFFFF; /* Light textarea background */
+    --textarea-border-color: #ccc; /* Light textarea border */
+    --textarea-focus-border-color: #007bff; /* Textarea focus border */
+    --textarea-focus-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Textarea focus shadow */
+    --button-bg-color: #1DA1F2; /* Button background color */
+    --button-bg-hover-color: #0d8ce0; /* Button hover color */
+    --button-text-color: white; /* Button text color */
+    --label-font-color: #333333; /* Label font color */
+}
+
+/* Night Mode Variables */
+.night-mode {
+    --background-color: #121212; /* Dark background */
+    --text-color: #E1E1E1; /* Light text on dark background */
+    --form-bg-color: #333333; /* Dark form background */
+    --form-border-color: #1DA1F2; /* Form border color */
+    --form-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Dark form box shadow */
+    --textarea-bg-color: #444444; /* Dark textarea background */
+    --textarea-border-color: #666666; /* Dark textarea border */
+    --textarea-focus-border-color: #81C7FF; /* Textarea focus border */
+    --textarea-focus-box-shadow: 0 0 5px rgba(129, 199, 255, 0.5); /* Textarea focus shadow */
+    --button-bg-color: #4CAF50; /* Dark button background */
+    --button-bg-hover-color: #45A049; /* Dark button hover color */
+    --button-text-color: white; /* Button text color */
+    --label-font-color: #E1E1E1; /* Label font color */
+}
+
+body {
     overflow: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 main {
@@ -19,27 +57,26 @@ article {
     justify-content: center;
 }
 
-
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 50%;
-    height: 50% ;
+    height: 50%;
     margin: 20px auto;
     padding: 20px;
-    border: 2px solid #1DA1F2;
+    border: 2px solid var(--form-border-color);
     border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--form-bg-color);
+    box-shadow: var(--form-box-shadow);
     font-family: Arial, sans-serif;
 }
 
 form label {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: var(--label-font-color);
     display: block;
     margin-bottom: 10px;
 }
@@ -49,29 +86,29 @@ form textarea {
     height: 45%;
     padding: 10px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--textarea-border-color);
     border-radius: 5px;
     margin-bottom: 15px;
     resize: vertical;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     overflow-wrap: break-word;
     white-space: pre-wrap; 
+    background-color: var(--textarea-bg-color);
+    color: var(--text-color);
 }
-
 
 form textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: var(--textarea-focus-border-color);
+    box-shadow: var(--textarea-focus-box-shadow);
     outline: none;
 }
-
 
 form button {
     width: 10%;
     height: 10%;
     padding: 10px;
-    background-color: #1DA1F2;
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -81,5 +118,5 @@ form button {
 }
 
 form button:hover {
-    background-color: #0d8ce0;
+    background-color: var(--button-bg-hover-color);
 }

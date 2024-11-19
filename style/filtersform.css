@@ -1,53 +1,82 @@
+/* Default Light Mode Variables */
+:root {
+    --filter-bg-color: #f5f5f5; /* Light background */
+    --filter-border-color: #ccc; /* Light border */
+    --filter-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    --filter-text-color: #000; /* Light text color */
+    --filter-button-bg-color: #007bff; /* Light button background */
+    --filter-button-hover-bg-color: #0056b3; /* Light button hover */
+    --filter-placeholder-color: #999; /* Light placeholder color */
+    --filter-input-focus-border-color: #007bff; /* Focus input border */
+}
+
+/* Night Mode Variables */
+.night-mode {
+    --filter-bg-color: #333333; /* Dark background */
+    --filter-border-color: #444444; /* Dark border */
+    --filter-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Dark shadow */
+    --filter-text-color: #E1E1E1; /* Light text on dark background */
+    --filter-button-bg-color: #66ccff; /* Dark mode button background */
+    --filter-button-hover-bg-color: #1a8cd8; /* Dark mode button hover */
+    --filter-placeholder-color: #aaa; /* Dark placeholder color */
+    --filter-input-focus-border-color: #66ccff; /* Focus input border */
+}
 
 .filter {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: var(--filter-bg-color);
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--filter-shadow);
     font-family: Arial, sans-serif;
     z-index: 1000;
+    color: var(--filter-text-color); /* Text color for night mode */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
-
 
 .filter label {
     align-self: center;
     margin-right: 10px;
     font-weight: bold;
+    color: var(--filter-text-color); /* Label text color */
 }
 
 .filter input[type="text"] {
     align-self: center;
     padding: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--filter-border-color);
     border-radius: 4px;
     width: 120px;
     font-size: 14px;
+    color: var(--filter-text-color); /* Text color inside input */
+    background-color: var(--filter-bg-color); /* Input background */
+    transition: border-color 0.3s, color 0.3s, background-color 0.3s;
 }
 
 .filter input[type="text"]:focus {
-    border-color: #007bff;
+    border-color: var(--filter-input-focus-border-color);
     outline: none;
 }
 
 .filter input[type="text"]::placeholder {
-    color: #999;
+    color: var(--filter-placeholder-color); /* Placeholder text color */
 }
 
 .filter button {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: var(--filter-button-bg-color);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    transition: background-color 0.3s;
 }
 
 .filter button:hover {
-    background-color: #0056b3;
+    background-color: var(--filter-button-hover-bg-color);
 }
 
 .filter input[type="text"]#dia,
