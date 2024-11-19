@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./../js/aside.js"></script>
+    <script src="./../js/maximo.js"></script>
+
+    <link rel="stylesheet" href="./../style/nuevoTweet.css">
+    <link rel="stylesheet" href="./../style/aside.css">
+    <link rel="stylesheet" href="./../style/cleaner.css"> 
+    <link rel="stylesheet" href="./../style/footer.css">
+    <link rel="stylesheet" href="./../style/nav.css"> 
+</head>
+<body>
+    <nav>
+        <h1>Bienvenido a NoTwitter</h1>
+    </nav>
+    <main>
+        <aside>
+            <div id="usuarioAside"> 
+            </div> 
+            <div id="botones">
+            </div>
+        </aside>
+        <article>
+            <form action="/enviarTweet" method="post">
+                <label>¿Que estas pensando?</label>
+                <textarea id="text-field" name="text-field" rows="4" cols="50"  maxlength="400" placeholder="Type here..."></textarea>
+                <p id="char-count">400 caracteres restantes</p>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <p>© 2024 YourTwitterClone. All rights reserved.</p>
+        <p>Data protection and privacy policy.</p>
+    </footer>
+</body>
+</html>

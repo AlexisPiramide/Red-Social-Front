@@ -1,0 +1,30 @@
+:root {
+    --nav-color: #5DB0E6;
+    --nav-height: 10vh;
+    --footer-color: #5DB0E6;
+    --footer-height: 20vh;
+    --main-color: #B2D5F1;
+    --main-height: 70vh;
+    --resaltar: #FFBB02;
+}
+
+
+nav {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    padding: 10px; 
+    background-color: var(--nav-color); 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    z-index: 1000; 
+}
+
+nav h1 {
+    flex: 1; 
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

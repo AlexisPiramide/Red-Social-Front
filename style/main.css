@@ -1,0 +1,31 @@
+body{
+    overflow: hidden;
+}
+
+main {
+    display: flex; 
+    flex: 1; 
+    padding: 0;
+}
+
+article {
+    flex: 1;
+    padding-bottom: 150px;
+    padding-top: 50px;
+    margin-left: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tweets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    padding: 20px;
+}
