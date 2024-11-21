@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function setupContent() {
-  const filtrosDiv = document.getElementsByClassName("filter")[0]; // Access the first element with the "filter" class
+  const filtrosDiv = document.getElementsByClassName("filter")[0]; 
   const form = document.createElement("form");
   form.id = "formulario";
   form.action = "/filtrados";
@@ -19,7 +19,6 @@ function setupContent() {
   inputTexto.placeholder = "..";
   form.append(inputTexto);
 
-  // Add "Usuario" label and input
   const labelUsuario = document.createElement("label");
   labelUsuario.textContent = "Usuario";
   form.append(labelUsuario);
@@ -31,12 +30,10 @@ function setupContent() {
   inputUsuario.placeholder = "...";
   form.append(inputUsuario);
 
-  // Add "Fecha" label and date inputs
   const labelFecha = document.createElement("label");
   labelFecha.textContent = "Fecha";
   form.append(labelFecha);
 
-  // Day input
   const inputDia = document.createElement("input");
   inputDia.type = "text";
   inputDia.id = "dia";
@@ -44,7 +41,6 @@ function setupContent() {
   inputDia.placeholder = "Dia";
   form.append(inputDia);
 
-  // Month input
   const inputMes = document.createElement("input");
   inputMes.type = "text";
   inputMes.id = "mes";
@@ -52,8 +48,6 @@ function setupContent() {
   inputMes.placeholder = "Mes";
   form.append(inputMes);
 
-
-  // Year input
   const inputAnno = document.createElement("input");
   inputAnno.type = "text";
   inputAnno.id = "anno";
@@ -61,12 +55,10 @@ function setupContent() {
   inputAnno.placeholder = "Año";
   form.append(inputAnno);
 
-  // Submit button
-
   const submitButton = document.createElement("button");
   submitButton.textContent = "Enviar";
   form.append(submitButton);
 
-  // Append the form to the filtrosDiv
-  filtrosDiv.append(form); // Make sure filtrosDiv is properly selected and accessible
+  
+  filtrosDiv.append(form); 
 }

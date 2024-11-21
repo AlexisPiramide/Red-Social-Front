@@ -1,25 +1,24 @@
-/* Default Light Mode Variables */
 :root {
-    --filter-bg-color: #f5f5f5; /* Light background */
-    --filter-border-color: #ccc; /* Light border */
-    --filter-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-    --filter-text-color: #000; /* Light text color */
-    --filter-button-bg-color: #007bff; /* Light button background */
-    --filter-button-hover-bg-color: #0056b3; /* Light button hover */
-    --filter-placeholder-color: #999; /* Light placeholder color */
-    --filter-input-focus-border-color: #007bff; /* Focus input border */
+    --filter-bg-color: #f5f5f5;
+    --filter-border-color: #ccc;
+    --filter-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --filter-text-color: #000;
+    --filter-button-bg-color: #007bff; 
+    --filter-button-hover-bg-color: #0056b3;
+    --filter-placeholder-color: #999;
+    --filter-input-focus-border-color: #007bff;
 }
 
 /* Night Mode Variables */
 .night-mode {
-    --filter-bg-color: #333333; /* Dark background */
-    --filter-border-color: #444444; /* Dark border */
-    --filter-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Dark shadow */
-    --filter-text-color: #E1E1E1; /* Light text on dark background */
-    --filter-button-bg-color: #66ccff; /* Dark mode button background */
-    --filter-button-hover-bg-color: #1a8cd8; /* Dark mode button hover */
-    --filter-placeholder-color: #aaa; /* Dark placeholder color */
-    --filter-input-focus-border-color: #66ccff; /* Focus input border */
+    --filter-bg-color: #333333;
+    --filter-border-color: #444444; 
+    --filter-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); 
+    --filter-text-color: #E1E1E1; 
+    --filter-button-bg-color: #66ccff; 
+    --filter-button-hover-bg-color: #1a8cd8; 
+    --filter-placeholder-color: #aaa;
+    --filter-input-focus-border-color: #66ccff;
 }
 
 .filter {
@@ -32,7 +31,7 @@
     box-shadow: var(--filter-shadow);
     font-family: Arial, sans-serif;
     z-index: 1000;
-    color: var(--filter-text-color); /* Text color for night mode */
+    color: var(--filter-text-color);
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
@@ -40,7 +39,7 @@
     align-self: center;
     margin-right: 10px;
     font-weight: bold;
-    color: var(--filter-text-color); /* Label text color */
+    color: var(--filter-text-color); 
 }
 
 .filter input[type="text"] {
@@ -50,8 +49,8 @@
     border-radius: 4px;
     width: 120px;
     font-size: 14px;
-    color: var(--filter-text-color); /* Text color inside input */
-    background-color: var(--filter-bg-color); /* Input background */
+    color: var(--filter-text-color);
+    background-color: var(--filter-bg-color); 
     transition: border-color 0.3s, color 0.3s, background-color 0.3s;
 }
 
@@ -61,7 +60,7 @@
 }
 
 .filter input[type="text"]::placeholder {
-    color: var(--filter-placeholder-color); /* Placeholder text color */
+    color: var(--filter-placeholder-color); 
 }
 
 .filter button {

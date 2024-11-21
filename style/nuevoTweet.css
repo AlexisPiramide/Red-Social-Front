@@ -1,35 +1,34 @@
-/* Default Light Mode Variables */
+
 :root {
-    --background-color: #FFFFFF; /* Light background */
-    --text-color: #000000; /* Light text */
-    --form-bg-color: #f9f9f9; /* Light form background */
-    --form-border-color: #1DA1F2; /* Form border color */
-    --form-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for form */
-    --textarea-bg-color: #FFFFFF; /* Light textarea background */
-    --textarea-border-color: #ccc; /* Light textarea border */
-    --textarea-focus-border-color: #007bff; /* Textarea focus border */
-    --textarea-focus-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Textarea focus shadow */
-    --button-bg-color: #1DA1F2; /* Button background color */
-    --button-bg-hover-color: #0d8ce0; /* Button hover color */
-    --button-text-color: white; /* Button text color */
-    --label-font-color: #333333; /* Label font color */
+    --background-color: #FFFFFF;
+    --text-color: #000000; 
+    --form-bg-color: #f9f9f9;
+    --form-border-color: #1DA1F2; 
+    --form-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --textarea-bg-color: #FFFFFF; 
+    --textarea-border-color: #ccc; 
+    --textarea-focus-border-color: #007bff;
+    --textarea-focus-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+    --button-bg-color: #1DA1F2;
+    --button-bg-hover-color: #0d8ce0;
+    --button-text-color: white;
+    --label-font-color: #333333;
 }
 
-/* Night Mode Variables */
 .night-mode {
-    --background-color: #121212; /* Dark background */
-    --text-color: #E1E1E1; /* Light text on dark background */
-    --form-bg-color: #333333; /* Dark form background */
-    --form-border-color: #1DA1F2; /* Form border color */
-    --form-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Dark form box shadow */
-    --textarea-bg-color: #444444; /* Dark textarea background */
-    --textarea-border-color: #666666; /* Dark textarea border */
-    --textarea-focus-border-color: #81C7FF; /* Textarea focus border */
-    --textarea-focus-box-shadow: 0 0 5px rgba(129, 199, 255, 0.5); /* Textarea focus shadow */
-    --button-bg-color: #4CAF50; /* Dark button background */
-    --button-bg-hover-color: #45A049; /* Dark button hover color */
-    --button-text-color: white; /* Button text color */
-    --label-font-color: #E1E1E1; /* Label font color */
+    --background-color: #121212;
+    --text-color: #E1E1E1;
+    --form-bg-color: #333333;
+    --form-border-color: #1DA1F2;
+    --form-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    --textarea-bg-color: #444444; 
+    --textarea-border-color: #666666;
+    --textarea-focus-border-color: #81C7FF;
+    --textarea-focus-box-shadow: 0 0 5px rgba(129, 199, 255, 0.5); 
+    --button-bg-color: #4CAF50; 
+    --button-bg-hover-color: #45A049;
+    --button-text-color: white;
+    --label-font-color: #E1E1E1;
 }
 
 body {
