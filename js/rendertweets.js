@@ -1,27 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-    renderTweets(tweets);
+    let tweets = localStorage.getItem("tweets");
+    if (tweets) {
+        tweets = JSON.parse(tweets);
+        renderTweets(tweets);
+    } else {
+        console.error("No tweets found in localStorage!");
+    }
 });
 
-const tweets = [
-    { id: 1, n_likes: 34, texto: "Learning SQL is fun! #coding", fecha: "2023-10-10T14:30:00", usuario: "alice.garcia@example.com", publicado: true },
-    { id: 2, n_likes: 57, texto: "Backend development is amazing!", fecha: "2023-10-11T09:15:00", usuario: "bob.hernandez@example.com", publicado: true },
-    { id: 3, n_likes: 12, texto: "Happy to join this platform!", fecha: "2023-10-12T17:45:00", usuario: "carlos.mendoza@example.com", publicado: true },
-    { id: 4, n_likes: 5, texto: "Testing a draft tweet, not published yet.", fecha: "2023-10-13T08:20:00", usuario: "alice.garcia@example.com", publicado: false },
-    { id: 5, n_likes: 22, texto: "Good morning, everyone! #positivity", fecha: "2023-10-14T06:00:00", usuario: "bob.hernandez@example.com", publicado: true },
-    { id: 1, n_likes: 34, texto: "Learning SQL is fun! #coding", fecha: "2023-10-10T14:30:00", usuario: "alice.garcia@example.com", publicado: true },
-    { id: 2, n_likes: 57, texto: "Backend development is amazing!", fecha: "2023-10-11T09:15:00", usuario: "bob.hernandez@example.com", publicado: true },
-    { id: 3, n_likes: 12, texto: "Happy to join this platform!", fecha: "2023-10-12T17:45:00", usuario: "carlos.mendoza@example.com", publicado: true },
-    { id: 4, n_likes: 5, texto: "Testing a draft tweet, not published yet.", fecha: "2023-10-13T08:20:00", usuario: "alice.garcia@example.com", publicado: false },
-    { id: 5, n_likes: 22, texto: "Good morning, everyone! #positivity", fecha: "2023-10-14T06:00:00", usuario: "bob.hernandez@example.com", publicado: true },
-    { id: 3, n_likes: 12, texto: "Happy to join this platform!", fecha: "2023-10-12T17:45:00", usuario: "carlos.mendoza@example.com", publicado: true },
-    { id: 4, n_likes: 5, texto: "Testing a draft tweet, not published yet.", fecha: "2023-10-13T08:20:00", usuario: "alice.garcia@example.com", publicado: false },
-    { id: 5, n_likes: 22, texto: "Good morning, everyone! #positivity", fecha: "2023-10-14T06:00:00", usuario: "bob.hernandez@example.com", publicado: true },
-    { id: 1, n_likes: 34, texto: "Learning SQL is fun! #coding", fecha: "2023-10-10T14:30:00", usuario: "alice.garcia@example.com", publicado: true },
-    { id: 2, n_likes: 57, texto: "Backend development is amazing!", fecha: "2023-10-11T09:15:00", usuario: "bob.hernandez@example.com", publicado: true },
-    { id: 3, n_likes: 12, texto: "Happy to join this platform!", fecha: "2023-10-12T17:45:00", usuario: "carlos.mendoza@example.com", publicado: true },
-    { id: 4, n_likes: 5, texto: "Testing a draft tweet, not published yet.", fecha: "2023-10-13T08:20:00", usuario: "alice.garcia@example.com", publicado: false },
-    { id: 5, n_likes: 22, texto: "Good morning, everyone! #positivity", fecha: "2023-10-14T06:00:00", usuario: "bob.hernandez@example.com", publicado: true },
-];
+/*
+localStorage.setItem(
+    "tweets",
+    JSON.stringify([
+        { id: 1, n_likes: 34, texto: "Learning SQL is fun! #coding", fecha: "2023-10-10T14:30:00", usuario: "alice.garcia@example.com", publicado: true },
+        { id: 2, n_likes: 57, texto: "Backend development is amazing!", fecha: "2023-10-11T09:15:00", usuario: "bob.hernandez@example.com", publicado: true },
+        { id: 3, n_likes: 12, texto: "Happy to join this platform!", fecha: "2023-10-12T17:45:00", usuario: "carlos.mendoza@example.com", publicado: true },
+        { id: 4, n_likes: 5, texto: "Testing a draft tweet, not published yet.", fecha: "2023-10-13T08:20:00", usuario: "alice.garcia@example.com", publicado: false },
+        { id: 5, n_likes: 22, texto: "Good morning, everyone! #positivity", fecha: "2023-10-14T06:00:00", usuario: "bob.hernandez@example.com", publicado: true },
+    ])
+);
+*/
+
 
 const renderTweets = (tweets) => {
     const tweetsContainer = document.getElementsByClassName("tweets")[0];
@@ -99,4 +98,14 @@ function toggleLikes(button, tweet) {
     }
 
     tweet.n_likes = likes;
+
+    let tweets = JSON.parse(localStorage.getItem("tweets")) || [];
+    const tweetIndex = tweets.findIndex(t => t.id === tweet.id);
+    if (tweetIndex !== -1) {
+        tweets[tweetIndex] = tweet; 
+        localStorage.setItem("tweets", JSON.stringify(tweets));
+    }
+
+
+    
 }

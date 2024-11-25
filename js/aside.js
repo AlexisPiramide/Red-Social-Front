@@ -1,38 +1,37 @@
 document.addEventListener("DOMContentLoaded", function() {
     mostrarBotones();
 });
-
-//localStorage.setItem("usuario", JSON.stringify({ nombre: "User Name", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQpZaeWxczipxrTdSIThz5hmwrRYhEeeAl5A&s" }));
+// Para pruebas rapidas, eliminar al acabar
+// localStorage.setItem("usuario", JSON.stringify({ nombre: "User Name", imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQpZaeWxczipxrTdSIThz5hmwrRYhEeeAl5A&s" }));
 
 function mostrarBotones() {
     const botonesDiv = document.getElementById("botones");
     const usuarioDiv = document.getElementById("usuarioAside");
-
+    
     botonesDiv.innerHTML = "";
     const usuario = localStorage.getItem("usuario");
-    usuario ? usuarioLogeado(botonesDiv, usuarioDiv) : usuarioNoLogeado(botonesDiv, usuarioDiv);
+
+    if (usuario) {
+        usuarioLogeado(botonesDiv, usuarioDiv);
+    } else {
+        usuarioNoLogeado(botonesDiv, usuarioDiv);
+    }
+}
+
+function crearBoton(href, id, text) {
+    const boton = document.createElement("a");
+    boton.href = href;
+    boton.innerHTML = `<button id="${id}">${text}</button>`;
+    return boton;
 }
 
 function usuarioLogeado(botonesDiv, usuarioDiv) {
-    const botonInicio = document.createElement("a");
-    botonInicio.href = "index.html";
-    botonInicio.innerHTML = '<button id="boton-inicio">Inicio</button>';
-    botonesDiv.append(botonInicio);
-
-    const botonTop = document.createElement("a");
-    botonTop.href = "index.html";
-    botonTop.innerHTML = '<button id="boton-top">TOP Tweets</button>';
-    botonesDiv.append(botonTop);
-
-    const botonNuevo = document.createElement("a");
-    botonNuevo.href = "nuevoTweet.html";
-    botonNuevo.innerHTML = '<button id="boton-nuevo">Nuevo Tweet</button>';
-    botonesDiv.append(botonNuevo);
-
-    const botonBorradores = document.createElement("a");
-    botonBorradores.href = "/";
-    botonBorradores.innerHTML = '<button id="boton-borradores">Mis Borradores</button>';
-    botonesDiv.append(botonBorradores);
+    botonesDiv.append(
+        crearBoton("index.html", "boton-inicio", "Inicio"),
+        crearBoton("index.html", "boton-top", "TOP Tweets"),
+        crearBoton("nuevoTweet.html", "boton-nuevo", "Nuevo Tweet"),
+        crearBoton("borradores.html", "boton-borradores", "Mis Borradores")
+    );
 
     usuarioDiv.innerHTML = "";
     const usuarioData = JSON.parse(localStorage.getItem("usuario"));
@@ -40,6 +39,7 @@ function usuarioLogeado(botonesDiv, usuarioDiv) {
     const imgPerfil = document.createElement("img");
     imgPerfil.src = usuarioData.imagen || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQpZaeWxczipxrTdSIThz5hmwrRYhEeeAl5A&s";
     imgPerfil.alt = "Imagen de perfil";
+    
     const nombreUsuario = document.createElement("span");
     nombreUsuario.textContent = usuarioData.nombre;
 
@@ -54,25 +54,13 @@ function usuarioLogeado(botonesDiv, usuarioDiv) {
 }
 
 function usuarioNoLogeado(botonesDiv, usuarioDiv) {
-    const botonInicio = document.createElement("a");
-    botonInicio.href = "index.html";
-    botonInicio.innerHTML = '<button id="boton-inicio">Inicio</button>';
-    botonesDiv.append(botonInicio);
-
-    const botonTop = document.createElement("a");
-    botonTop.href = "index.html";
-    botonTop.innerHTML = '<button id="boton-top">TOP Tweets</button>';
-    botonesDiv.append(botonTop);
-
-    const botonRegistro = document.createElement("a");
-    botonRegistro.href = "registro.html";
-    botonRegistro.innerHTML = '<button id="boton-registro">Registro</button>';
-    botonesDiv.append(botonRegistro);
-
-    const botonLogin = document.createElement("a");
-    botonLogin.href = "login.html";
-    botonLogin.innerHTML = '<button id="boton-login">LogIn</button>';
-    botonesDiv.append(botonLogin);
+    botonesDiv.append(
+        crearBoton("index.html", "boton-inicio", "Inicio"),
+        crearBoton("index.html", "boton-top", "TOP Tweets"),
+        crearBoton("registro.html", "boton-registro", "Registro"),
+        crearBoton("login.html", "boton-login", "LogIn")
+    );
 
     usuarioDiv.innerHTML = "Bienvenido";
 }
+

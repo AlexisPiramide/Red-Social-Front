@@ -6,5 +6,4 @@ document.addEventListener("DOMContentLoaded", function () {
         const remaining = 400 - textField.value.length;
         charCount.textContent = `${remaining} caracteres restantes`;
     });
-
 });

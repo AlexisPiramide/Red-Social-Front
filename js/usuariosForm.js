@@ -1,26 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('registro');
+    const registro = document.getElementById('registro');
+    const login = document.getElementById('login');
 
-    form.addEventListener('submit', (e) => {
-        validacion(e);
-    });
+    if (registro) {
+        registro.addEventListener('submit', (e) => validateForm(e, true));
+    } else if (login) {
+        login.addEventListener('submit', (e) => validateForm(e, false));
+    }
 });
-function validacion(e) {
-    e.preventDefault();
 
+
+function validateForm(e, isRegistro) {
+    e.preventDefault();
+    
     const nombre = document.getElementById('nombre').value.trim();
     const errorNombre = document.getElementById('errornombre');
     const correo = document.getElementById('correo').value.trim();
     const errorCorreo = document.getElementById('errorcorreo');
     const password = document.getElementById('password').value.trim();
     const errorPassword = document.getElementById('errorpassword');
-    const repeatPassword = document.getElementById('repetir_password').value.trim();
-    const errorRepeatPassword = document.getElementById('errorrepetir');
+    const repeatPassword = isRegistro ? document.getElementById('repetir_password').value.trim() : null;
+    const errorRepeatPassword = isRegistro ? document.getElementById('errorrepetir') : null;
 
     errorNombre.textContent = '';
     errorCorreo.textContent = '';
     errorPassword.textContent = '';
-    errorRepeatPassword.textContent = '';
+    if (isRegistro) errorRepeatPassword.textContent = '';
 
     let valid = true;
 
@@ -52,14 +57,21 @@ function validacion(e) {
         valid = false;
     }
 
-    if (repeatPassword !== password) {
+    if (isRegistro && repeatPassword !== password) {
         errorRepeatPassword.textContent = 'Las contraseñas no coinciden.';
         valid = false;
     }
 
+
     if (valid) {
+        const formData = {
+            nombre: nombre,
+            correo: correo,
+
+        };
+
+        localStorage.setItem(isRegistro ? 'usuario' : 'usuario', JSON.stringify(formData));
+
         alert('Formulario enviado con éxito.');
     }
 }
-
-
