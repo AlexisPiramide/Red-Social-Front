@@ -72,9 +72,9 @@ function setupContent() {
     let errorMessage = "";
 
 
-    if (usuario && usuario.length < 3) {
+    if (usuario && usuario.length < 8) {
       isValid = false;
-      errorMessage += "El campo 'Usuario' debe tener al menos 3 caracteres.\n";
+      errorMessage += "El campo 'Usuario' debe tener al menos 8 caracteres.\n";
     }
   
     const validDate = /^([0-9]{1,2})$/.test(dia) && /^([0-9]{1,2})$/.test(mes) && /^([0-9]{4})$/.test(anno);
