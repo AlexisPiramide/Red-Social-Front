@@ -82,18 +82,14 @@
 .filter input[type="text"]#mes,
 .filter input[type="text"]#anno {
     width: 60px;
+    margin-right: 0;
+    font-weight: bold;
 }
 
 .filter input#texto,
 .filter input#usuario {
     margin-right: 10px;
-    font-weight: bold;
-}
 
-.filter input#dia,
-.filter input#mes {
-    margin-right: 0;
-    font-weight: bold;
 }
 
 .filter form {

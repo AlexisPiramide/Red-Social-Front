@@ -56,9 +56,40 @@ function setupContent() {
   form.append(inputAnno);
 
   const submitButton = document.createElement("button");
+  submitButton.type = "submit";
   submitButton.textContent = "Enviar";
   form.append(submitButton);
 
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const usuario = inputUsuario.value.trim();
+    const dia = inputDia.value.trim();
+    const mes = inputMes.value.trim();
+    const anno = inputAnno.value.trim();
+
+    let isValid = true;
+    let errorMessage = "";
+
+
+    if (usuario && usuario.length < 3) {
+      isValid = false;
+      errorMessage += "El campo 'Usuario' debe tener al menos 3 caracteres.\n";
+    }
   
+    const validDate = /^([0-9]{1,2})$/.test(dia) && /^([0-9]{1,2})$/.test(mes) && /^([0-9]{4})$/.test(anno);
+    if (!validDate) {
+      isValid = false;
+      errorMessage += "La fecha debe tener el formato correcto (Día, Mes, Año).\n";
+    }
+
+    if (!isValid) {
+      alert(errorMessage);
+    } else {
+      alert("Formulario válido, se enviaría al back.");
+    
+    }
+  });
+
   filtrosDiv.append(form); 
 }

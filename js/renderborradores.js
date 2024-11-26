@@ -9,9 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (borradores) {
         borradores = JSON.parse(borradores);
         borradores = borradores.filter(borrador => borrador.usuario == usuario.correo);
-        renderBorradores(borradores); 
-    } else {
-        console.log("No borradores found in localStorage!");
+        renderBorradores(borradores);
+        console.log(borradores.length)
+        if(borradores.length == 0){
+            
+            document.getElementsByClassName("borradores")[0].innerHTML = "No hay borradores"
+        }
     }
 });
 
@@ -87,13 +90,3 @@ function removeBorrador(id) {
     const borradorDiv = document.getElementById(id);
     borradorDiv.remove();
 }
-
-/*
-localStorage.setItem(
-    "borradores",
-    JSON.stringify([
-        { id: 1, texto: "Testing borrador one.", usuario: "ana.gomez@example.com" },
-        { id: 2, texto: "Another borrador tweet here.", usuario: "ana.gomez@example.com" }
-    ])
-);
-*/
