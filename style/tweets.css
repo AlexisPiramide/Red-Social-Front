@@ -1,4 +1,37 @@
 
+:root {
+  --tweet-bg-color: #fff; 
+  --tweet-border-color: #e1e8ed:
+  --tweet-header-bg-color: #fff; 
+  --tweet-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --tweet-text-color: #000; 
+  --tweet-date-color: #657786; 
+  --tweet-like-bg-color: #e8f5fe; 
+  --tweet-like-border-color: #1da1f2; 
+  --tweet-like-hover-bg-color: #cce7f6; 
+  --tweet-liked-bg-color: #ffcccc;
+  --tweet-liked-border-color: #ff0000;
+  --tweet-liked-color: #ff0000; 
+  --profile-pic-border-color: transparent;
+}
+
+/* Night Mode Variables */
+.night-mode {
+  --tweet-bg-color: #333333;
+  --tweet-border-color: #444444;
+  --tweet-header-bg-color: #444444;
+  --tweet-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1); 
+  --tweet-text-color: #E1E1E1;
+  --tweet-date-color: #AAB8C2;
+  --tweet-like-bg-color: #5b5b5b; 
+  --tweet-like-border-color: #66ccff; 
+  --tweet-like-hover-bg-color: #4a4a4a;
+  --tweet-liked-bg-color: #ff6666; 
+  --tweet-liked-border-color: #ff0000; 
+  --tweet-liked-color: #ff0000;
+  --profile-pic-border-color: #666666; 
+}
+
 .tweet {
   display: flex;
   flex-direction: column;
