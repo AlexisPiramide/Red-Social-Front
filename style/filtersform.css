@@ -1,25 +1,4 @@
-:root {
-    --filter-bg-color: #f5f5f5;
-    --filter-border-color: #ccc;
-    --filter-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --filter-text-color: #000;
-    --filter-button-bg-color: #007bff; 
-    --filter-button-hover-bg-color: #0056b3;
-    --filter-placeholder-color: #999;
-    --filter-input-focus-border-color: #007bff;
-}
 
-/* Night Mode Variables */
-.night-mode {
-    --filter-bg-color: #333333;
-    --filter-border-color: #444444; 
-    --filter-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); 
-    --filter-text-color: #E1E1E1; 
-    --filter-button-bg-color: #66ccff; 
-    --filter-button-hover-bg-color: #1a8cd8; 
-    --filter-placeholder-color: #aaa;
-    --filter-input-focus-border-color: #66ccff;
-}
 
 .filter {
     display: flex;

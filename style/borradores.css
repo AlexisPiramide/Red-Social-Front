@@ -1,38 +1,4 @@
-:root {
-    --background-color: #FFFFFF;
-    --text-color: #000000; 
-    --form-bg-color: #f9f9f9;
-    --form-border-color: #1DA1F2; 
-    --form-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --textarea-bg-color: #FFFFFF; 
-    --textarea-border-color: #ccc; 
-    --textarea-focus-border-color: #007bff;
-    --textarea-focus-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
-    --button-bg-color: #1DA1F2;
-    --button-bg-hover-color: #0d8ce0;
-    --button-text-color: white;
-    --label-font-color: #333333;
-    --publish-button-bg-color: #4CAF50; /* Green background for publish button */
-    --publish-button-bg-hover-color: #45A049; /* Hover effect */
-}
 
-.night-mode {
-    --background-color: #121212;
-    --text-color: #E1E1E1;
-    --form-bg-color: #333333;
-    --form-border-color: #1DA1F2;
-    --form-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    --textarea-bg-color: #444444; 
-    --textarea-border-color: #666666;
-    --textarea-focus-border-color: #81C7FF;
-    --textarea-focus-box-shadow: 0 0 5px rgba(129, 199, 255, 0.5); 
-    --button-bg-color: #4CAF50; 
-    --button-bg-hover-color: #45A049;
-    --button-text-color: white;
-    --label-font-color: #E1E1E1;
-    --publish-button-bg-color: #4CAF50;
-    --publish-button-bg-hover-color: #45A049;
-}
 
 body {
     overflow: hidden;
@@ -123,7 +89,7 @@ article {
 
 .borrador button:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(72, 213, 88, 0.5); /* Greenish glow effect when focused */
+    box-shadow: 0 0 5px rgba(72, 213, 88, 0.5);
 }
 
 form button {

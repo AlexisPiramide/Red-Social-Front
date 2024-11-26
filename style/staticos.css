@@ -1,5 +1,39 @@
 
 :root {
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+    --form-bg-color: #f9f9f9;
+    --form-border-color: #1DA1F2;
+    --form-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --textarea-bg-color: #FFFFFF;
+    --textarea-border-color: #ccc;
+    --textarea-focus-border-color: #007bff;
+    --textarea-focus-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    --button-bg-color: #1DA1F2;
+    --button-bg-hover-color: #0d8ce0;
+    --button-text-color: white;
+    --label-font-color: #333333;
+    --publish-button-bg-color: #4CAF50;
+    --publish-button-bg-hover-color: #45A049;
+    --filter-bg-color: #f5f5f5;
+    --filter-border-color: #ccc;
+    --filter-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --filter-text-color: #000;
+    --filter-button-bg-color: #007bff;
+    --filter-button-hover-bg-color: #0056b3;
+    --filter-placeholder-color: #999;
+    --filter-input-focus-border-color: #007bff;
+    --input-bg-color: #f9f9f9;
+    --input-border-color: #ccc;
+    --input-focus-border-color: #5cb3fd;
+    --input-focus-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    --button-bg-color: #28a745;
+    --button-bg-hover-color: #218838;
+    --button-text-color: #FFFFFF;
+    --form-bg-color: #FFFFFF;
+    --form-border-color: #ccc;
+    --form-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --label-font-color: #000000;
     --nav-color: #5DB0E6;
     --nav-height: 10vh;
     --footer-color: #5DB0E6;
@@ -7,30 +41,27 @@
     --main-color: #B2D5F1;
     --main-height: 70vh;
     --resaltar: #FFBB02;
-    --background-color: #FFFFFF;
-    --text-color: #000000; 
     --button-border-color: #000000;
-    --button-text-color: #000000; 
-    --button-bg-color: #FFFFFF; 
-    --aside-bg-color: #f0f0f0; 
+    --button-text-color: #000000;
+    --button-bg-color: #FFFFFF;
+    --aside-bg-color: #f0f0f0;
     --aside-button-border-color: #000000;
     --aside-button-bg-color: #FFFFFF;
+    --tweet-bg-color: #fff;
+    --tweet-border-color: #e1e8ed;
+    --tweet-header-bg-color: #fff;
+    --tweet-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --tweet-text-color: #000;
+    --tweet-date-color: #657786;
+    --tweet-like-bg-color: #e8f5fe;
+    --tweet-like-border-color: #1da1f2;
+    --tweet-like-hover-bg-color: #cce7f6;
+    --tweet-liked-bg-color: #ffcccc;
+    --tweet-liked-border-color: #ff0000;
+    --tweet-liked-color: #ff0000;
+    --profile-pic-border-color: transparent;
 }
 
-.night-mode {
-    --nav-color: #333333; 
-    --footer-color: #333333; 
-    --main-color: #2C2C2C;
-    --resaltar: #FFBB02;
-    --background-color: #121212; 
-    --text-color: #E1E1E1; 
-    --button-border-color: #E1E1E1; 
-    --button-text-color: #E1E1E1;
-    --button-bg-color: #333333; 
-    --aside-bg-color: #333333;
-    --aside-button-border-color: #E1E1E1;
-    --aside-button-bg-color: #333333;
-}
 
 
 html, body {

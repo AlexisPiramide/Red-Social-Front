@@ -1,36 +1,3 @@
-
-:root {
-    --background-color: #FFFFFF;
-    --text-color: #000000; 
-    --input-bg-color: #f9f9f9; 
-    --input-border-color: #ccc; 
-    --input-focus-border-color: #5cb3fd; 
-    --input-focus-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    --button-bg-color: #28a745; 
-    --button-bg-hover-color: #218838; 
-    --button-text-color: #FFFFFF; 
-    --form-bg-color: #FFFFFF; 
-    --form-border-color: #ccc; 
-    --form-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    --label-font-color: #000000;
-}
-
-.night-mode {
-    --background-color: #121212; 
-    --text-color: #E1E1E1; 
-    --input-bg-color: #333333; 
-    --input-border-color: #444444;
-    --input-focus-border-color: #81C7FF;
-    --input-focus-box-shadow: 0 0 5px rgba(129, 199, 255, 1);
-    --button-bg-color: #4CAF50; 
-    --button-bg-hover-color: #45A049; 
-    --button-text-color: white;
-    --form-bg-color: #333333;
-    --form-border-color: #555555; 
-    --form-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); 
-    --label-font-color: #E1E1E1;
-}
-
 body {
     overflow: hidden;
     background-color: var(--background-color);
